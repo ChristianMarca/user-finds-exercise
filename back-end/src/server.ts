@@ -23,6 +23,7 @@ const { BAD_REQUEST } = StatusCodes;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+
 // app.use(cors());
 
 // Show routes called in console during development
