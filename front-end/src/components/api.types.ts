@@ -4,4 +4,5 @@ export type User = {
   name: string;
   pwdHash: string;
   role: number;
+  action: any;
 };

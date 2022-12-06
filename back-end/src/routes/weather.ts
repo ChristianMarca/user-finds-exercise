@@ -5,7 +5,7 @@ import { WeatherService } from "@services/weatherService";
 
 // Constants
 const router = Router();
-const { BAD_REQUEST, CREATED, OK } = StatusCodes;
+const { OK } = StatusCodes;
 
 // http://www.7timer.info/doc.php?lang=en
 router.get("/location", async (request: Request, res: Response) => {
