@@ -5,3 +5,9 @@ export type User = {
   pwdHash: string;
   role: number;
 };
+
+export type Location = {
+  weather: string
+  rh2m: string
+  prec_type: string
+}
