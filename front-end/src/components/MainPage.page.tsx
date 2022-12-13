@@ -39,7 +39,6 @@ export const MainPage: React.FC = () => {
       <div>
         {dedent`
           MANDATORY
-          * FIX FE-BE communication BUG [intentional]
           * TODO ADD BUTTON AND MODAL (PORTAL) TO ADD NEW USER
           * TODO IN LIST ADD BUTTON TO REMOVE USER FROM LIST
           * TODO DISPLAY WEATHER IN A CARD (in bottom right corner as a floating card)
