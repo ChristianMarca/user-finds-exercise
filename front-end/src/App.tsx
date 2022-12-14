@@ -1,5 +1,5 @@
 import { AppLayout } from "./App.styles";
-import { MainPage } from "./components/MainPage.page";
+import { MainPage } from "./views/MainPage.page";
 
 function App() {
   return (
