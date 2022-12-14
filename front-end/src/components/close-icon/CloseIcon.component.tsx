@@ -8,9 +8,9 @@ export const CloseIcon = (props: SVGProps<SVGSVGElement>) => {
       height="24"
       fill="none"
       stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
       {...props}
     >
       <path d="M18 6 6 18M6 6l12 12" />
