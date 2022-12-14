@@ -1,12 +1,11 @@
-import React from 'react';
-import './App.css';
-import { MainPage } from './components/MainPage.page';
+import { AppLayout } from "./App.styles";
+import { MainPage } from "./components/MainPage.page";
 
 function App() {
   return (
-    <div className="App">
+    <AppLayout>
       <MainPage />
-    </div>
+    </AppLayout>
   );
 }
 

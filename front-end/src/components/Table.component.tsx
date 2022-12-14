@@ -6,8 +6,8 @@ export const Table = <T extends Record<string, string | number>>({
 }: TableProps<T>): JSX.Element => {
   return (
     <div className="flex flex-col">
-      <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
-        <div className="inline-block py-2 min-w-full sm:px-6 lg:px-8">
+      <div className="overflow-x-auto">
+        <div className="inline-block py-2 min-w-full">
           <div className="overflow-hidden shadow-md sm:rounded-lg">
             <table className="min-w-full">
               <thead className="bg-gray-50 dark:bg-gray-700">
@@ -34,7 +34,11 @@ export const Table = <T extends Record<string, string | number>>({
                         key={`${index}-${column.key}`}
                         className="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
                       >
-                        {Object.entries(row).find(([key, value]) => key === column.key)?.[1]}
+                        {
+                          Object.entries(row).find(
+                            ([key, value]) => key === column.key
+                          )?.[1]
+                        }
                       </td>
                     ))}
                   </tr>
