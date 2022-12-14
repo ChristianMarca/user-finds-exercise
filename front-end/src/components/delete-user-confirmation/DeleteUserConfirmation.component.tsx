@@ -1,5 +1,8 @@
 import { Button } from "../button/Button.component";
-import { DeleteUserConfirmationMessage } from "./DeleteUserConfimration.styles";
+import {
+  DeleteButton,
+  DeleteUserConfirmationMessage,
+} from "./DeleteUserConfimration.styles";
 import { DeleteUserConfirmationProps } from "./DeleteUserConfirmation.types";
 
 export const DeleteUserConfirmation = (props: DeleteUserConfirmationProps) => {
@@ -16,7 +19,7 @@ export const DeleteUserConfirmation = (props: DeleteUserConfirmationProps) => {
         email&nbsp;
         <b>{props.user.email}</b>
       </DeleteUserConfirmationMessage>
-      <Button onClick={handleDelete}>Delete</Button>
+      <DeleteButton onClick={handleDelete}>Delete</DeleteButton>
       <Button onClick={handleCancel}>Cancel</Button>
     </div>
   );
