@@ -15,7 +15,12 @@ async function all() {
   return response.data.users;
 }
 
+async function deleteOne(id: number) {
+  return axios.delete(`${API_BASE_URL}/api/users/delete/${id}`);
+}
+
 export const UserService = {
   addOne,
   all,
+  deleteOne,
 } as const;
