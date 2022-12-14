@@ -1,3 +1,10 @@
+import {
+  StyledTable,
+  TableInnerWrapper,
+  TableScrollWrapper,
+  TableShadowWrapper,
+  TableWrapper,
+} from "./Table.styles";
 import { TableProps } from "./Table.types";
 
 export const Table = <T extends Record<string, string | number>>({
@@ -5,19 +12,15 @@ export const Table = <T extends Record<string, string | number>>({
   data,
 }: TableProps<T>): JSX.Element => {
   return (
-    <div className="flex flex-col">
-      <div className="overflow-x-auto">
-        <div className="inline-block py-2 min-w-full">
-          <div className="overflow-hidden shadow-md sm:rounded-lg">
-            <table className="min-w-full">
-              <thead className="bg-gray-50 dark:bg-gray-700">
+    <TableWrapper>
+      <TableScrollWrapper>
+        <TableInnerWrapper>
+          <TableShadowWrapper>
+            <StyledTable>
+              <thead>
                 <tr>
                   {columns?.map((column) => (
-                    <th
-                      key={column.title}
-                      scope="col"
-                      className="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
-                    >
+                    <th key={column.title} scope="col">
                       {column.title}
                     </th>
                   ))}
@@ -25,15 +28,9 @@ export const Table = <T extends Record<string, string | number>>({
               </thead>
               <tbody>
                 {data?.map?.((row, index) => (
-                  <tr
-                    key={index}
-                    className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
-                  >
+                  <tr key={index}>
                     {columns?.map((column) => (
-                      <td
-                        key={`${index}-${column.key}`}
-                        className="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                      >
+                      <td key={`${index}-${column.key}`}>
                         {
                           Object.entries(row).find(
                             ([key, value]) => key === column.key
@@ -44,10 +41,10 @@ export const Table = <T extends Record<string, string | number>>({
                   </tr>
                 ))}
               </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
+            </StyledTable>
+          </TableShadowWrapper>
+        </TableInnerWrapper>
+      </TableScrollWrapper>
+    </TableWrapper>
   );
 };
