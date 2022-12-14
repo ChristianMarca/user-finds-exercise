@@ -1,6 +1,6 @@
 import axios from "axios";
-import { User } from "../../components/api.types";
 import { API_BASE_URL } from "../config";
+import type { User } from "./types";
 
 async function addOne(user: User) {
   return axios.post(`${API_BASE_URL}/api/users/add`, {

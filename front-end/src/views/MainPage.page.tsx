@@ -5,7 +5,7 @@ import { Button } from "../components/button/Button.component";
 import { UserService } from "../api/users/service";
 import { useModal } from "../hooks/use-modal";
 import { AddUserForm } from "../components/add-user-form/AddUserForm";
-import type { User } from "../components/api.types";
+import type { User } from "../api/users/types";
 import type { TableColumn } from "../components/table/Table.types";
 
 const columns: TableColumn<User>[] = [
