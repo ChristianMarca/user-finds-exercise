@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { AddUserForm } from '../components/add-user-form/AddUserForm.componet';
+import { AddUserForm } from '../components/add-user-form/AddUserForm.component';
 import { Button } from '../components/button/Button.component';
 import { DeleteUserConfirmation } from '../components/delete-user-confirmation/DeleteUserConfirmation.component';
 import { Modal } from '../components/modal/Modal.component';
