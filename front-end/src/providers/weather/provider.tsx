@@ -1,7 +1,7 @@
 import { WeatherSummaryContext } from './context';
+import type { WeatherSummaryContextProviderProps } from './types';
 import { useReducer } from 'react';
 import { weatherSummaryReducer } from './reducer';
-import type { WeatherSummaryContextProviderProps } from './types';
 
 export const WeatherSummaryContextProvider = (props: WeatherSummaryContextProviderProps) => {
   const [state, dispatch] = useReducer(weatherSummaryReducer, { status: 'UNINITIALIZED' });

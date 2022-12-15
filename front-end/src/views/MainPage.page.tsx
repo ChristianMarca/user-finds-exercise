@@ -8,8 +8,8 @@ import type { TableColumn } from '../components/table/Table.types';
 import type { User } from '../api/users/types';
 import { UserService } from '../api/users/service';
 import { WeatherFloatingCard } from '../components/weather-floating-card/WeatherFloatingCard.component';
-import { useModal } from '../hooks/use-modal';
 import { WeatherSummaryContextProvider } from '../providers/weather';
+import { useModal } from '../hooks/use-modal';
 
 const columns: TableColumn<User>[] = [
   {
