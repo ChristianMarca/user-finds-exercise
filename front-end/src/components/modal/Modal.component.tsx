@@ -1,8 +1,7 @@
-import React from 'react';
-import { CloseIcon } from '../close-icon/CloseIcon.component';
-import { ReactPortal } from '../portal/portal.component';
 import { ModalBox, ModalCLoseButton, ModalHeader, ModalOverlay, ModalTitle } from './Modal.styles';
+import { CloseIcon } from '../close-icon/CloseIcon.component';
 import type { ModalProps } from './Modal.types';
+import { ReactPortal } from '../portal/portal.component';
 
 export const Modal = (props: ModalProps) => {
   function closeModal(ev: React.MouseEvent) {

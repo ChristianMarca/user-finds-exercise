@@ -1,4 +1,3 @@
-import { Button } from '../button/Button.component';
 import {
   StyledTable,
   TableInnerWrapper,
@@ -6,7 +5,8 @@ import {
   TableShadowWrapper,
   TableWrapper
 } from './Table.styles';
-import { TableProps } from './Table.types';
+import { Button } from '../button/Button.component';
+import type { TableProps } from './Table.types';
 
 export const Table = <T extends Record<string, string | number>>({
   columns,

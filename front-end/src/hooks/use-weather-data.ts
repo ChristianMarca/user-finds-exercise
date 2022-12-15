@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { WeatherService } from '../api/weather/service';
-import { WeatherSummaryContext } from '../components/weather-floating-card/WeatherFloatingCard.types';
+import type { WeatherSummaryContext } from '../components/weather-floating-card/WeatherFloatingCard.types';
 import { getTimezoneOffsetInHours } from '../utils/get-timezone-offset';
 
 export function useWeatherData() {

@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { FlexContainer } from '../flex-container/FlexContainer';
+import styled from 'styled-components';
 
 export const WeatherCardPositioner = styled.div`
   position: fixed;

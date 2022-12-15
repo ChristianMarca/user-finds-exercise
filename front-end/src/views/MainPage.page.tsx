@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Table } from '../components/table/Table.component';
-import { Modal } from '../components/modal/Modal.component';
-import { Button } from '../components/button/Button.component';
-import { UserService } from '../api/users/service';
-import { useModal } from '../hooks/use-modal';
 import { AddUserForm } from '../components/add-user-form/AddUserForm.componet';
-import type { User } from '../api/users/types';
-import type { TableColumn } from '../components/table/Table.types';
+import { Button } from '../components/button/Button.component';
 import { DeleteUserConfirmation } from '../components/delete-user-confirmation/DeleteUserConfirmation.component';
+import { Modal } from '../components/modal/Modal.component';
+import { Table } from '../components/table/Table.component';
+import type { TableColumn } from '../components/table/Table.types';
+import type { User } from '../api/users/types';
+import { UserService } from '../api/users/service';
 import { WeatherFloatingCard } from '../components/weather-floating-card/WeatherFloatingCard.component';
+import { useModal } from '../hooks/use-modal';
 
 const columns: TableColumn<User>[] = [
   {

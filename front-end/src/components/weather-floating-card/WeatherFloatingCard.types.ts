@@ -1,4 +1,4 @@
-import { WeatherSummary } from '../../api/weather/types';
+import type { WeatherSummary } from '../../api/weather/types';
 
 export type WeatherAPIStatus = 'LOADING' | 'SUCCESS' | 'ERROR' | 'UNINITIALIZED';
 

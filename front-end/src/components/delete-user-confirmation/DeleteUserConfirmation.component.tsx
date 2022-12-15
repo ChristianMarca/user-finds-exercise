@@ -1,6 +1,6 @@
-import { Button } from '../button/Button.component';
 import { DeleteButton, DeleteUserConfirmationMessage } from './DeleteUserConfimration.styles';
-import { DeleteUserConfirmationProps } from './DeleteUserConfirmation.types';
+import { Button } from '../button/Button.component';
+import type { DeleteUserConfirmationProps } from './DeleteUserConfirmation.types';
 
 export const DeleteUserConfirmation = (props: DeleteUserConfirmationProps) => {
   function handleDelete() {

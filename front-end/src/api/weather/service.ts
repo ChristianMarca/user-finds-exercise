@@ -1,7 +1,7 @@
-import axios from 'axios';
+import type { WeatherAPIDataResponse, WeatherAPIRequestParams, WeatherSummary } from './types';
 import { API_BASE_URL } from '../config';
+import axios from 'axios';
 import { transformWeatherDataFromWeatherAPIResponse } from './transformers';
-import { WeatherAPIRequestParams, WeatherAPIDataResponse, WeatherSummary } from './types';
 
 async function fetchLocation(params: WeatherAPIRequestParams): Promise<WeatherSummary> {
   const response = await axios.get<{ weatherData: WeatherAPIDataResponse }>(

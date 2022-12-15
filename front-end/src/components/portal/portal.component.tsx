@@ -1,6 +1,6 @@
 import { useLayoutEffect, useState } from 'react';
-import { createPortal } from 'react-dom';
 import type { ReactPortalProps } from './portal.types';
+import { createPortal } from 'react-dom';
 
 export const ReactPortal = (props: ReactPortalProps) => {
   const [wrapperElement, setWrapperElement] = useState<HTMLElement | null>(null);

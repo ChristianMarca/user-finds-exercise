@@ -1,4 +1,4 @@
-import { User } from '../../api/users/types';
+import type { User } from '../../api/users/types';
 import { isEmail } from '../shared/email-validation';
 import { isString } from '../shared/string-validation';
 

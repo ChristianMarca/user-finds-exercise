@@ -1,5 +1,5 @@
-import { isString } from './string-validation';
 import type { Email } from './util-types';
+import { isString } from './string-validation';
 
 const MAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
