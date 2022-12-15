@@ -50,7 +50,8 @@ function transformDataSeriesFromWeatherAPI(
   const type = d.weather;
   const temp = d.temp2m;
   const perception = d.prec_type;
-  return { clouds, wind, type, temp, perception };
+  const humidity = d.rh2m;
+  return { clouds, wind, type, temp, perception, humidity };
 }
 
 function transformWindspeedFromWeatherAPIDataSeries(
