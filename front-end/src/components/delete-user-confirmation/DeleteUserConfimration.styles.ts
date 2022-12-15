@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Button } from "../button/Button.component";
+import styled from 'styled-components';
+import { Button } from '../button/Button.component';
 
 export const DeleteUserConfirmationMessage = styled.p`
   font-size: 1.25rem;

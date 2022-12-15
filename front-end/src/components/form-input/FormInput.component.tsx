@@ -1,8 +1,8 @@
-import React, { HTMLProps } from "react";
-import styled from "styled-components";
+import React, { HTMLProps } from 'react';
+import styled from 'styled-components';
 
 const Container = styled.div`
-  font-family: "Arial";
+  font-family: 'Arial';
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,13 +27,12 @@ const Container = styled.div`
   }
 `;
 
-export const FormInput = React.forwardRef<
-  HTMLInputElement,
-  HTMLProps<HTMLInputElement>
->((props, ref) => {
-  return (
-    <Container>
-      <input ref={ref} {...props}></input>
-    </Container>
-  );
-});
+export const FormInput = React.forwardRef<HTMLInputElement, HTMLProps<HTMLInputElement>>(
+  (props, ref) => {
+    return (
+      <Container>
+        <input ref={ref} {...props}></input>
+      </Container>
+    );
+  }
+);

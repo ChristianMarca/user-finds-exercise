@@ -1,9 +1,9 @@
-import { formToJSON } from "axios";
-import { FormEvent } from "react";
-import { isUser } from "../../models/users/validations";
-import { Button } from "../button/Button.component";
-import { FormInput } from "../form-input/FormInput.component";
-import type { AddUserFormProps } from "./AddUserForm.types";
+import { formToJSON } from 'axios';
+import { FormEvent } from 'react';
+import { isUser } from '../../models/users/validations';
+import { Button } from '../button/Button.component';
+import { FormInput } from '../form-input/FormInput.component';
+import type { AddUserFormProps } from './AddUserForm.types';
 
 export const AddUserForm = (props: AddUserFormProps) => {
   function handleSubmit(ev: FormEvent<HTMLFormElement>) {

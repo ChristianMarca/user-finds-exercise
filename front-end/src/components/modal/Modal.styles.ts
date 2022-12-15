@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ModalOverlay = styled.div<{ open: boolean }>`
   position: fixed;
@@ -7,7 +7,7 @@ export const ModalOverlay = styled.div<{ open: boolean }>`
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  display: ${(p) => (p.open ? "grid" : "none")};
+  display: ${(p) => (p.open ? 'grid' : 'none')};
   place-items: center;
   z-index: 1;
 `;

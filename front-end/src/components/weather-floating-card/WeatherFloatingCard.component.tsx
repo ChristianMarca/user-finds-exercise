@@ -1,17 +1,14 @@
-import { WeatherAPIPerceptionType, WeatherData } from "../../api/weather/types";
-import { useTime } from "../../hooks/use-time";
-import { useWeatherData } from "../../hooks/use-weather-data";
-import { FlexContainer } from "../flex-container/FlexContainer";
+import { WeatherAPIPerceptionType, WeatherData } from '../../api/weather/types';
+import { useTime } from '../../hooks/use-time';
+import { useWeatherData } from '../../hooks/use-weather-data';
+import { FlexContainer } from '../flex-container/FlexContainer';
 import {
   Card,
   CardTitle,
   DegreeSection,
-  WeatherCardPositioner,
-} from "./WeatherFloatingCard.styles";
-import {
-  WeatherCardProps,
-  WeatherFloatingCardContentProps,
-} from "./WeatherFloatingCard.types";
+  WeatherCardPositioner
+} from './WeatherFloatingCard.styles';
+import { WeatherCardProps, WeatherFloatingCardContentProps } from './WeatherFloatingCard.types';
 
 export const WeatherFloatingCard = () => {
   const weather = useWeatherData();
@@ -27,12 +24,12 @@ export const WeatherFloatingCard = () => {
 
 const WeatherFloatingCardContent = (props: WeatherFloatingCardContentProps) => {
   switch (props.weather.status) {
-    case "ERROR":
+    case 'ERROR':
       return <p>Error fetching weather data.</p>;
-    case "LOADING":
-    case "UNINITIALIZED":
+    case 'LOADING':
+    case 'UNINITIALIZED':
       return <p>Loading ...</p>;
-    case "SUCCESS":
+    case 'SUCCESS':
       return <WeatherCard weather={props.weather.data} />;
   }
 };
@@ -84,9 +81,9 @@ function getAverageTempForDay(dayWeather: WeatherData[]) {
 }
 
 const PERCEPTION_LABELS: Record<WeatherAPIPerceptionType, string> = {
-  frzr: "🥶 Freezing",
-  icep: "❄️ Icy",
-  none: "☀️ Clear",
-  rain: "☔︎ Rain",
-  snow: "🌨 Snow",
+  frzr: '🥶 Freezing',
+  icep: '❄️ Icy',
+  none: '☀️ Clear',
+  rain: '☔︎ Rain',
+  snow: '🌨 Snow'
 };

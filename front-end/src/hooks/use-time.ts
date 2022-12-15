@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export const useTime = (refreshRate = 500) => {
   const [now, setNow] = useState(getTime());

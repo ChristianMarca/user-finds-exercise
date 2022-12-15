@@ -1,4 +1,4 @@
-import { User } from "../../api/users/types";
+import { User } from '../../api/users/types';
 
 export interface DeleteUserConfirmationProps {
   user: User;

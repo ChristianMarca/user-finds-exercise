@@ -1,11 +1,9 @@
-import { useLayoutEffect, useState } from "react";
-import { createPortal } from "react-dom";
-import type { ReactPortalProps } from "./portal.types";
+import { useLayoutEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
+import type { ReactPortalProps } from './portal.types';
 
 export const ReactPortal = (props: ReactPortalProps) => {
-  const [wrapperElement, setWrapperElement] = useState<HTMLElement | null>(
-    null
-  );
+  const [wrapperElement, setWrapperElement] = useState<HTMLElement | null>(null);
 
   useLayoutEffect(() => {
     let element = document.getElementById(props.id);
@@ -29,8 +27,8 @@ export const ReactPortal = (props: ReactPortalProps) => {
 };
 
 function addElementWithIdToBody(id: string) {
-  const element = document.createElement("div");
-  element.setAttribute("id", id);
+  const element = document.createElement('div');
+  element.setAttribute('id', id);
   document.body.appendChild(element);
   return element;
 }

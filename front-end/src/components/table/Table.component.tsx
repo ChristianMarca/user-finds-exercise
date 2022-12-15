@@ -1,17 +1,17 @@
-import { Button } from "../button/Button.component";
+import { Button } from '../button/Button.component';
 import {
   StyledTable,
   TableInnerWrapper,
   TableScrollWrapper,
   TableShadowWrapper,
-  TableWrapper,
-} from "./Table.styles";
-import { TableProps } from "./Table.types";
+  TableWrapper
+} from './Table.styles';
+import { TableProps } from './Table.types';
 
 export const Table = <T extends Record<string, string | number>>({
   columns,
   data,
-  onDelete,
+  onDelete
 }: TableProps<T>): JSX.Element => {
   function handleDelete(data: T) {
     onDelete(data);
@@ -37,11 +37,7 @@ export const Table = <T extends Record<string, string | number>>({
                   <tr key={index}>
                     {columns?.map((column) => (
                       <td key={`${index}-${column.key.toString()}`}>
-                        {
-                          Object.entries(row).find(
-                            ([key, value]) => key === column.key
-                          )?.[1]
-                        }
+                        {Object.entries(row).find(([key, value]) => key === column.key)?.[1]}
                       </td>
                     ))}
                     <td>

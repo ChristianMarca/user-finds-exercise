@@ -1,9 +1,6 @@
-import { Button } from "../button/Button.component";
-import {
-  DeleteButton,
-  DeleteUserConfirmationMessage,
-} from "./DeleteUserConfimration.styles";
-import { DeleteUserConfirmationProps } from "./DeleteUserConfirmation.types";
+import { Button } from '../button/Button.component';
+import { DeleteButton, DeleteUserConfirmationMessage } from './DeleteUserConfimration.styles';
+import { DeleteUserConfirmationProps } from './DeleteUserConfirmation.types';
 
 export const DeleteUserConfirmation = (props: DeleteUserConfirmationProps) => {
   function handleDelete() {
@@ -15,8 +12,7 @@ export const DeleteUserConfirmation = (props: DeleteUserConfirmationProps) => {
   return (
     <div>
       <DeleteUserConfirmationMessage>
-        Are you sure you want to delete user <b>{props.user.name}</b> with
-        email&nbsp;
+        Are you sure you want to delete user <b>{props.user.name}</b> with email&nbsp;
         <b>{props.user.email}</b>
       </DeleteUserConfirmationMessage>
       <DeleteButton onClick={handleDelete}>Delete</DeleteButton>

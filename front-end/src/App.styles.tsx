@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const AppLayout = styled.div`
   @media only screen and (min-width: 480px) {
