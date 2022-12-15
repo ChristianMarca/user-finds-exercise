@@ -1,4 +1,7 @@
-import { WeatherSummary } from "../../api/weather/types";
+import {
+  WeatherAPIPerceptionType,
+  WeatherSummary,
+} from "../../api/weather/types";
 
 export type WeatherAPIStatus =
   | "LOADING"
@@ -17,4 +20,8 @@ export type WeatherSummaryContext =
     };
 export type WeatherFloatingCardContentProps = {
   weather: WeatherSummaryContext;
+};
+
+export type WeatherCardProps = {
+  weather: WeatherSummary;
 };
