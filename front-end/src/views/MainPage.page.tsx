@@ -8,6 +8,7 @@ import { AddUserForm } from "../components/add-user-form/AddUserForm.componet";
 import type { User } from "../api/users/types";
 import type { TableColumn } from "../components/table/Table.types";
 import { DeleteUserConfirmation } from "../components/delete-user-confirmation/DeleteUserConfirmation.component";
+import { WeatherFloatingCard } from "../components/weather-floating-card/WeatherFloatingCard.component";
 
 const columns: TableColumn<User>[] = [
   {
@@ -62,6 +63,7 @@ export const MainPage: React.FC = () => {
 
   return (
     <div>
+      <WeatherFloatingCard />
       <Table data={users} columns={columns} onDelete={confirmDeleteUser} />
       <Modal
         title="Add User"
