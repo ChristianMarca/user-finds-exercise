@@ -9,11 +9,12 @@ const { BAD_REQUEST, CREATED, OK } = StatusCodes;
 
 // http://www.7timer.info/doc.php?lang=en
 router.get("/location", async (request: Request, res: Response) => {
-  const { lat, long }: { lat: string; long: string } = request.query as any;
+  const { lat, long, offset }: { lat: string; long: string; offset: string } =
+    request.query as any;
 
   const weather = new WeatherService();
 
-  const weatherData = await weather.getWeather(lat, long);
+  const weatherData = await weather.getWeather(lat, long, offset);
 
   return res.status(OK).json({ weatherData });
 });
