@@ -2,12 +2,7 @@ import { WeatherAPIPerceptionType, WeatherData } from '../../api/weather/types';
 import { useTime } from '../../hooks/use-time';
 import { useWeatherData } from '../../hooks/use-weather-data';
 import { FlexContainer } from '../flex-container/FlexContainer';
-import {
-  Card,
-  CardTitle,
-  DegreeSection,
-  WeatherCardPositioner
-} from './WeatherFloatingCard.styles';
+import { Card, DegreeSection, WeatherCardPositioner } from './WeatherFloatingCard.styles';
 import { WeatherCardProps, WeatherFloatingCardContentProps } from './WeatherFloatingCard.types';
 
 export const WeatherFloatingCard = () => {

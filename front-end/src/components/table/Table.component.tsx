@@ -37,7 +37,7 @@ export const Table = <T extends Record<string, string | number>>({
                   <tr key={index}>
                     {columns?.map((column) => (
                       <td key={`${index}-${column.key.toString()}`}>
-                        {Object.entries(row).find(([key, value]) => key === column.key)?.[1]}
+                        {Object.entries(row).find(([key]) => key === column.key)?.[1]}
                       </td>
                     ))}
                     <td>

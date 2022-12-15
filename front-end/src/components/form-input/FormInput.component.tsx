@@ -1,4 +1,4 @@
-import React, { HTMLProps } from 'react';
+import React, { ForwardRefRenderFunction, HTMLProps } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -27,12 +27,14 @@ const Container = styled.div`
   }
 `;
 
-export const FormInput = React.forwardRef<HTMLInputElement, HTMLProps<HTMLInputElement>>(
-  (props, ref) => {
-    return (
-      <Container>
-        <input ref={ref} {...props}></input>
-      </Container>
-    );
-  }
-);
+const _FormInput: ForwardRefRenderFunction<HTMLInputElement, HTMLProps<HTMLInputElement>> = (
+  props,
+  ref
+) => {
+  return (
+    <Container>
+      <input ref={ref} {...props}></input>
+    </Container>
+  );
+};
+export const FormInput = React.forwardRef(_FormInput);
