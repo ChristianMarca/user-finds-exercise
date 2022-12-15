@@ -55,7 +55,12 @@ export interface WeatherAPIDataResponse {
   dataseries: Dataseries[];
 }
 
-type PerceptionType = "none" | "snow" | "rain" | "frzr" | "icep";
+export type WeatherAPIPerceptionType =
+  | "none"
+  | "snow"
+  | "rain"
+  | "frzr"
+  | "icep";
 
 export type CloudDensity =
   | "0-6%"
@@ -83,7 +88,8 @@ export interface WeatherData {
   wind: { speed: Windspeed; direction: string };
   type: WeatherType;
   temp: number;
-  perception: PerceptionType;
+  perception: WeatherAPIPerceptionType;
+  humidity: string;
 }
 
 export interface WeatherSummary {
