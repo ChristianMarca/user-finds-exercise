@@ -9,6 +9,7 @@ import type { User } from '../api/users/types';
 import { UserService } from '../api/users/service';
 import { WeatherFloatingCard } from '../components/weather-floating-card/WeatherFloatingCard.component';
 import { useModal } from '../hooks/use-modal';
+import { WeatherSummaryContextProvider } from '../providers/weather';
 
 const columns: TableColumn<User>[] = [
   {
@@ -61,7 +62,9 @@ export const MainPage: React.FC = () => {
 
   return (
     <div>
-      <WeatherFloatingCard />
+      <WeatherSummaryContextProvider>
+        <WeatherFloatingCard />
+      </WeatherSummaryContextProvider>
       <Table data={users} columns={columns} onDelete={confirmDeleteUser} />
       <Modal title="Add User" onClose={closeAddUserModal} open={isAddUserModalOpen}>
         <AddUserForm onSubmit={addOneUser} />

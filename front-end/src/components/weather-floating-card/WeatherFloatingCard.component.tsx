@@ -1,34 +1,34 @@
 import { Card, DegreeSection, WeatherCardPositioner } from './WeatherFloatingCard.styles';
 import type { WeatherAPIPerceptionType, WeatherData } from '../../api/weather/types';
-import type {
-  WeatherCardProps,
-  WeatherFloatingCardContentProps
-} from './WeatherFloatingCard.types';
+
 import { FlexContainer } from '../flex-container/FlexContainer';
+import type { WeatherCardProps } from './WeatherFloatingCard.types';
 import { useTime } from '../../hooks/use-time';
-import { useWeatherData } from '../../hooks/use-weather-data';
+import { useWeatherSummaryData } from '../../providers/weather';
 
 export const WeatherFloatingCard = () => {
-  const weather = useWeatherData();
-
   return (
     <WeatherCardPositioner>
       <Card>
-        <WeatherFloatingCardContent weather={weather} />
+        <WeatherFloatingCardContent />
       </Card>
     </WeatherCardPositioner>
   );
 };
 
-const WeatherFloatingCardContent = (props: WeatherFloatingCardContentProps) => {
-  switch (props.weather.status) {
+const WeatherFloatingCardContent = () => {
+  const ctx = useWeatherSummaryData();
+  switch (ctx.status) {
     case 'ERROR':
       return <p>Error fetching weather data.</p>;
-    case 'LOADING':
+    case 'LOCATION_LOADING':
+      return <p>waiting on browser location permission</p>;
     case 'UNINITIALIZED':
+    case 'WEATHER_DATA_LOADING':
+    case 'LOCATION_GRANTED':
       return <p>Loading ...</p>;
-    case 'SUCCESS':
-      return <WeatherCard weather={props.weather.data} />;
+    case 'WEATHER_DATA_SUCCESS':
+      return <WeatherCard weather={ctx.data} />;
   }
 };
 
