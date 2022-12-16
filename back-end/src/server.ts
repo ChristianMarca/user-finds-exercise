@@ -24,7 +24,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-// app.use(cors());
+const FRONTEND_URL = `http://${process.env.HOST}:${process.env.FRONTEND_PORT}`;
+
+app.use(
+  cors((req, callback) => {
+    let options = { origin: true };
+    if (req.headers.origin !== FRONTEND_URL) {
+      options = { origin: false };
+    }
+    return callback(null, options);
+  })
+);
 
 // Show routes called in console during development
 if (process.env.NODE_ENV === "development") {
